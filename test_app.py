@@ -10,4 +10,5 @@ def client():
 def test_index(client):
     response = client.get('/')
     assert response.status_code == 200
-    assert b"Hello, Flask!" in response.data
+    # HTML faylda <title>Fibonacci Cal</title> mavjudligini tekshiramiz
+    assert b"<title>Fibonacci Cal</title>" in response.data
